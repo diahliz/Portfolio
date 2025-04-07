@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Diah Liz Reji</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      background-color: #222;
+    }
+    .navbar ul li {
+      display: inline-block;
+      margin: 10px;
+    }
+    .navbar ul li a {
+      text-decoration: none;
+      color: white;
+      padding: 10px;
+      font-weight: bold;
+    }
+    .navbar ul li a:hover {
+      background-color: #444;
+      border-radius: 5px;
+    }
+    #heading {
+      font-size: 270%;
+      text-align: center;
+      color: white;
+      margin-top: 30px;
+    }
+    .tab-buttons {
+      text-align: center;
+      margin: 30px 0 10px;
+    }
+    .tab-buttons button {
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+    .tab-buttons button.active {
+      background-color: #666;
+    }
+    .tab-content {
+      display: none;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    #about img {
+      float: left;
+      margin: 10px 20px 10px 0;
+      width: 100px;
+      height: auto;
+    }
+    .timeline ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .timeline li {
+      margin: 15px 0;
+      padding-left: 15px;
+    }
+    .skills-container {
+      padding: 10px;
+    }
+    .progressbar {
+      width: 90%;
+      background-color: #444;
+      border-radius: 20px;
+      overflow: hidden;
+      margin: 10px 0 20px;
+    }
+    .progress {
+      height: 20px;
+      border-radius: 20px;
+    }
+    .py { width: 80%; background-color: #00bcd4; }
+    .html { width: 90%; background-color: #e44d26; }
+    .css { width: 85%; background-color: #264de4; }
+    .java { width: 70%; background-color: #f89820; }
+    .Contact a {
+      color: #666362;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  
+  <h1 id="heading">Diah Liz Reji</h1>
+
+  <div class="tab-buttons">
+    <button class="tablink active" onclick="openTab('aboutTab')">About Me</button>
+    <button class="tablink" onclick="openTab('educationTab')">Education</button>
+    <button class="tablink" onclick="openTab('skillsTab')">Skills</button>
+    <button class="tablink" onclick="openTab('contactTab')">Contact</button>
+  </div>
+
+  <!-- Tabs -->
+  <div id="aboutTab" class="tab-content active">
+    <h2 style="text-align: center;">About Me</h2>
+    <p id="about">
+        I'm just beginning my journey into the world of coding.
+I'm currently learning the basics and exploring different programming languages like Python, HTML, and JavaScript. I’m excited about the possibilities coding can open up—from building websites and apps to solving real-world problems with technology. Even though I’m new, I’m eager to learn, experiment, and grow as a developer. Every line of code is a small step forward!
+
+
+    </p>
+  </div>
+
+  <div id="educationTab" class="tab-content">
+    <h2 style="text-align: center;">Education</h2>
+    <div class="timeline">
+      <ul>
+        <li>
+          <div class="Content">
+            <p>2024-Present<br><i>Amrita Vishwa Vidyapeetham</i><br>Computer Science Engineering, Amritapuri</p>
+          </div>
+        </li>
+        <li>
+          <div class="Content">
+            <p>2024<br><i>Chavara Public School, Pala</i><br>12th (Higher Secondary)<br>85%</p>
+          </div>
+        </li>
+        <li>
+          <div class="Content">
+            <p>2022<br><i>BTC Public School, Puthencruz</i><br>10th (Secondary)<br>92.8%</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="skillsTab" class="tab-content">
+    <h2 style="text-align: center;">Skills</h2>
+    <div class="skills-container">
+      <p><span>Python</span></p>
+      <div class="progressbar"><div class="progress py"></div></div>
+
+      <p><span>HTML</span></p>
+      <div class="progressbar"><div class="progress html"></div></div>
+
+      <p><span>CSS</span></p>
+      <div class="progressbar"><div class="progress css"></div></div>
+
+      <p><span>Java</span></p>
+      <div class="progressbar"><div class="progress java"></div></div>
+    </div>
+  </div>
+
+  <div id="contactTab" class="tab-content">
+    <h2 style="text-align: center;">Contact</h2>
+    <div class="Contact">
+      <p>Email: <a href="mailto:diahlizreji@gmail.com" target="_blank">diahlizreji@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/diah-liz-reji-991827334/" target="_blank">Diah liz Reji</a></p>
+      <p>GitHub: <a href="https://github.com/diahliz" target="_blank">diahliz</a></p>
+    </div>
+  </div>
+
+  <script>
+    function openTab(tabName) {
+      const contents = document.getElementsByClassName("tab-content");
+      const buttons = document.getElementsByClassName("tablink");
+      for (let content of contents) content.classList.remove("active");
+      for (let btn of buttons) btn.classList.remove("active");
+      document.getElementById(tabName).classList.add("active");
+      event.currentTarget.classList.add("active");
+    }
+  </script>
+
+</body>
+</html>
